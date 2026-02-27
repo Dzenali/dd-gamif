@@ -1,0 +1,4 @@
+2026-02-27 08:51:08.278 - Debug - Connect to ws://localhost:8080
+2026-02-27 08:51:08.287 - Debug - Web socket state : Connecting
+2026-02-27 08:51:10.646 - Error - Websocket failure : Failed to connect to localhost/[0:0:0:0:0:0:0:1]:8080
+2026-02-27 08:51:10.648 - Debug - Web socket state : Error
