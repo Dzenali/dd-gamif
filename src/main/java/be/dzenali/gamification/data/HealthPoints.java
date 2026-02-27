@@ -16,12 +16,22 @@ public class HealthPoints {
 
     public int getCurrentHP() { return currentHP; }
 
+    /**
+     * Increase current and max hp.
+     * @param hp HealthPoints
+     * @return New HealthPoints
+     */
     public HealthPoints increasedBy(HealthPoints hp) {
         int tempCurrentHP = this.getCurrentHP() + hp.getCurrentHP();
         int tempMaxHP = this.getMaxHP() + hp.getMaxHP();
         return new HealthPoints(tempCurrentHP, tempMaxHP);
     }
 
+    /**
+     * modify current hp by amount
+     * @param amount current hp modifier
+     * @return current hp value
+     */
     public int updateCurrentHP(int amount) {
         if(this.getCurrentHP() + amount > this.getMaxHP()) {
             this.currentHP = this.getMaxHP();

@@ -15,4 +15,9 @@ public abstract class Item {
     public int getWeight() {
         return weight;
     }
+
+    @Override
+    public String toString() {
+        return String.format("an item with value %d and weight %d", value, weight);
+    }
 }

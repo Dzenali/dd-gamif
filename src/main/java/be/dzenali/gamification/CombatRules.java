@@ -4,8 +4,17 @@ import be.dzenali.gamification.data.StatType;
 import be.dzenali.gamification.entity.Monster;
 import be.dzenali.gamification.entity.Player;
 
+
+/**
+ * Class that handles the combat rules of a fight
+ */
 public class CombatRules {
 
+    /**
+     * compute initiative of a player based on is dex and armor type
+     * @param player the player
+     * @return initiative
+     */
     public int calculateInitiative(Player player) {
         int penalty = 0;
         switch (player.getArmor().getArmorType()){
@@ -15,10 +24,20 @@ public class CombatRules {
         return modifier(player.getStat(StatType.DEXTERITY)) - penalty ;
     }
 
+    /**
+     * @param monster the monster
+     * @return initiative
+     */
     public int calculateInitiative(Monster monster) {
         return modifier(monster.getStat(StatType.DEXTERITY));
     }
 
+    /**
+     * compute damage applied to monster
+     * @param attacker Player
+     * @param defender Monster
+     * @return damage to monster from player
+     */
     public int computeDamage(Player attacker, Monster defender) {
         int attack = computeAttackScore(attacker);
         int defense = computeDefense(defender);
@@ -26,6 +45,12 @@ public class CombatRules {
         return Math.max(attack - defense, 0);
     }
 
+    /**
+     * compute damage applied to player
+     * @param attacker Monster
+     * @param defender Player
+     * @return damage to monster from player
+     */
     public int computeDamage(Monster attacker, Player defender) {
         int attack = computeAttackScore(attacker);
         int defense = computeDefense(defender);
@@ -39,10 +64,20 @@ public class CombatRules {
 
     public void inflictDamage(Monster monster, int dmg){ monster.getHealthPoints().updateCurrentHP(-dmg);}
 
+    /**
+     * Computer player attack damage based on weapon + strength
+     * @param attacker
+     * @return damage of player
+     */
     private int computeAttackScore(Player attacker) {
         return attacker.attack() + attacker.getStat(StatType.STRENGTH) / 4;
     }
 
+    /**
+     * Computer monster attack damage based on basic damage and current monster aggressivity
+     * @param attacker Monster
+     * @return damage of monster
+     */
     private int computeAttackScore(Monster attacker) {
         int dmg = 0;
         switch (attacker.getAggressivity()){
@@ -57,6 +92,11 @@ public class CombatRules {
         return defender.getArmorClass();
     }
 
+    /**
+     * Compute monster def based on Armor class and Aggressivity
+     * @param defender  Monster
+     * @return armor value
+     */
     private int computeDefense(Monster defender) {
         int bonus = 0;
         switch (defender.getAggressivity()){

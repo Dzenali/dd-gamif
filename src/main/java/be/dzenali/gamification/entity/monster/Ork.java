@@ -7,6 +7,9 @@ import be.dzenali.gamification.entity.Monster;
 public class Ork extends Monster {
     private boolean ironWill;
 
+    /**
+     * A common enemy
+     */
     public Ork(){
         super("Ork",
                 3,

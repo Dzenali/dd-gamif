@@ -13,6 +13,9 @@ import java.util.ArrayList;
 public class Warrior extends Player {
     private int rage;
 
+    /**
+     * Basic archetype of all brawl and no brain
+     */
     public Warrior() {
         super("Warrior",
                 8,

@@ -13,6 +13,9 @@ import java.util.ArrayList;
 public class Mage extends Player {
     private int mana;
 
+    /**
+     * Basic archetype of library rat
+     */
     public Mage() {
         super("Mage",
                 3,
@@ -23,6 +26,11 @@ public class Mage extends Player {
         this.mana = 300;
     }
 
+    /**
+     * Casts a given spell and return damage/heal value if possible or 0 otherwise
+     * @param spellName name of the spell to be cast
+     * @return damage value
+     */
     public int cast(String spellName){
         switch (spellName){
             case "FireBall" -> {

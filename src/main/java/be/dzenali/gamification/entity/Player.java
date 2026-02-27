@@ -51,7 +51,11 @@ public class Player {
 
     public Armor getArmor(){ return armor; }
 
+    public void setArmor(Armor armor){ this.armor = armor; }
+
     public Weapon getWeapon(){ return weapon;}
+
+    public void setWeapon(Weapon weapon){ this.weapon = weapon;}
 
     public int attack(){ return weapon.getDamage();}
 

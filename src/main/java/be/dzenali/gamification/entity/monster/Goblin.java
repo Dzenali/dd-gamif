@@ -5,6 +5,10 @@ import be.dzenali.gamification.data.StatBlock;
 import be.dzenali.gamification.entity.Monster;
 
 public class Goblin extends Monster {
+
+    /**
+     * LaughingStock / Punchingbag
+     */
     public Goblin() {
         super("Goblin",
                 1,

@@ -14,6 +14,9 @@ import java.util.ArrayList;
 public class Rogue extends Player {
     private int energy;
 
+    /**
+     * Basic archetype of a "c" user
+     */
     public Rogue() {
         super("Rogue",
                 1,
@@ -24,6 +27,11 @@ public class Rogue extends Player {
         this.energy = 100;
     }
 
+    /**
+     * Execute a monster if is health is currently lower than 10% of max health
+     * @param monster the Monster to execute
+     * @return currentHP of monster
+     */
     public int execute(Monster monster) {
         if((monster.getHealthPoints().getCurrentHP() < monster.getHealthPoints().getMaxHP()/10) && energy >= 10){
             System.out.println("You execute your enemy!");

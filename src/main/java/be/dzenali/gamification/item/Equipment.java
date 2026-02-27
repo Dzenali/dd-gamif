@@ -22,10 +22,12 @@ public class Equipment {
     }
 
     public int getValue() {
-        return (value*durability)/maxDurability;
+        return value;
     }
 
     public void updateDurability(int durability){
         this.durability += durability;
     }
+
+    public int getMaxDurability() { return maxDurability; }
 }

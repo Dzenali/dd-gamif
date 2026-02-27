@@ -7,6 +7,9 @@ import be.dzenali.gamification.entity.Monster;
 public class Dragon extends Monster {
     private boolean canFly = true;
 
+    /**
+     * The strongest few to be met
+     */
     public Dragon() {
         super("Dragon",
                 15,
@@ -17,12 +20,20 @@ public class Dragon extends Monster {
                 5000);
     }
 
+    /**
+     * Deals twice less damage once it is grounded
+     * @return attack damage
+     */
     @Override
     public int getAttackDmg(){
         canFly = !(getHealthPoints().getCurrentHP() < getHealthPoints().getMaxHP()/2);
         return canFly ? (int)(super.getAttackDmg()*0.5) : (int)(super.getAttackDmg()*1.5);
     }
 
+    /**
+     * As twice as much armor once grounded
+     * @return armorClass
+     */
     @Override
     public int getArmorClass(){
         canFly = !(getHealthPoints().getCurrentHP() < getHealthPoints().getMaxHP()/2);

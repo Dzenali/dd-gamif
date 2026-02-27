@@ -3,6 +3,9 @@ package be.dzenali.gamification.data;
 import java.util.EnumMap;
 import java.util.Map;
 
+/**
+ * Data type of entity stateblock
+ */
 public class StatBlock {
 
     private final Map<StatType, Integer> stats = new EnumMap<>(StatType.class);
@@ -15,6 +18,7 @@ public class StatBlock {
         stats.put(StatType.WISDOM, validateInit(wis));
         stats.put(StatType.CHARISMA, validateInit(cha));
     }
+
 
     private int validateInit(int value) {
         if (value < 0 || value > 20) {

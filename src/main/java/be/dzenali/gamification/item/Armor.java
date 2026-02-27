@@ -20,6 +20,10 @@ public class Armor extends Equipment {
         return armorType;
     }
 
+    /**
+     * Update armor durability based on armor class and damage taken
+     * @param damage taken
+     */
     public void damageDurability(int damage){
         switch (armorType){
             case LIGHT -> updateDurability((int) (damage*0.5));
@@ -28,6 +32,9 @@ public class Armor extends Equipment {
         }
     }
 
+    /**
+     * @return max bonus from dex given armor class
+     */
     public int getArmorClassDexBonusCap(){
         int cap = 0;
         switch (armorType){

@@ -6,6 +6,7 @@ public class Weapon extends Equipment {
     private final int damage;
     private final WeaponType weaponType;
 
+
     public Weapon(int damage, WeaponType weaponType, int durability, int value) {
         super(durability,value);
         this.damage = damage;
@@ -25,6 +26,7 @@ public class Weapon extends Equipment {
     }
 
     public int getDamage(){
+        damageDurability(damage);
         return damage;
     }
 
