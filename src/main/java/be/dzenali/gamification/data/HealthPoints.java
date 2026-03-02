@@ -4,9 +4,16 @@ public class HealthPoints {
     private int currentHP;
     private final int maxHP;
 
+
     public HealthPoints(int currentHP,int maxHP) {
-        if(maxHP <= 0){ throw new IllegalArgumentException(
-                "Health must be > 0. Received: " + maxHP);
+        if(maxHP <= 0){
+            maxHP = 1;
+        }
+        if(currentHP > maxHP){
+            currentHP = maxHP;
+        }
+        if(currentHP <= 0){
+            currentHP = 1;
         }
         this.currentHP = currentHP;
         this.maxHP = maxHP;

@@ -30,7 +30,7 @@ public class Coords {
      * @return Distance from {@code this} to {@code other}
      */
     public double getDistanceTo(Coords other) {
-        return Math.sqrt(Math.pow(other.getX() - this.getX(), 4) + Math.pow(other.getY() - this.getY(), 2));
+        return Math.sqrt(Math.pow(other.getX() - this.getX(), 2) + Math.pow(other.getY() - this.getY(), 2));
     }
 
     /**
