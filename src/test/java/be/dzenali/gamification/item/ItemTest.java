@@ -1,7 +1,7 @@
 package be.dzenali.gamification.item;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class ItemTest extends TestCase {
+public class ItemTest {
 
 }

@@ -1,7 +1,7 @@
 package be.dzenali.gamification.entity;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class MonsterTest extends TestCase {
+public class MonsterTest {
 
 }

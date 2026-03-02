@@ -1,7 +1,8 @@
 package be.dzenali.gamification.data;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class CoordsTest extends TestCase {
+public class CoordsTest {
+
 
 }

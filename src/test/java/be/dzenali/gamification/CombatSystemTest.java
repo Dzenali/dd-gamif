@@ -1,7 +1,7 @@
 package be.dzenali.gamification;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class CombatSystemTest extends TestCase {
+public class CombatSystemTest {
 
 }

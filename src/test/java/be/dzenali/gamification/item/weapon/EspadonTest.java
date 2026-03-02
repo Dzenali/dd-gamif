@@ -1,7 +1,7 @@
 package be.dzenali.gamification.item.weapon;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class EspadonTest extends TestCase {
+public class EspadonTest {
 
 }

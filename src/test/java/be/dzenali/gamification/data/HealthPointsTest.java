@@ -1,7 +1,7 @@
 package be.dzenali.gamification.data;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class HealthPointsTest extends TestCase {
+public class HealthPointsTest {
 
 }

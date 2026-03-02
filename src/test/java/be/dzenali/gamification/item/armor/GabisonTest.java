@@ -1,7 +1,7 @@
 package be.dzenali.gamification.item.armor;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class GabisonTest extends TestCase {
+public class GabisonTest {
 
 }

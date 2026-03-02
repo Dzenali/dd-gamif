@@ -1,7 +1,7 @@
 package be.dzenali.gamification.item.weapon;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class ToothpickTest extends TestCase {
+public class ToothpickTest {
 
 }

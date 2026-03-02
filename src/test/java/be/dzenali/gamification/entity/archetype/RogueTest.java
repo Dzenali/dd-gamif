@@ -1,7 +1,7 @@
 package be.dzenali.gamification.entity.archetype;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class RogueTest extends TestCase {
+public class RogueTest {
 
 }

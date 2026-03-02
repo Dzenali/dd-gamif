@@ -1,7 +1,7 @@
 package be.dzenali.gamification.item.armor;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class PajamaTest extends TestCase {
+public class PajamaTest {
 
 }

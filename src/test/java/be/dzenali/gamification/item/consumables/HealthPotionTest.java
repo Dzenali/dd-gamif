@@ -1,7 +1,7 @@
 package be.dzenali.gamification.item.consumables;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class HealthPotionTest extends TestCase {
+public class HealthPotionTest {
 
 }
