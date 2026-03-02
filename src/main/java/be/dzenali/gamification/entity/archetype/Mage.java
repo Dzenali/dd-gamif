@@ -2,9 +2,7 @@ package be.dzenali.gamification.entity.archetype;
 
 import be.dzenali.gamification.data.StatBlock;
 import be.dzenali.gamification.entity.Player;
-import be.dzenali.gamification.item.Armor;
 import be.dzenali.gamification.item.Item;
-import be.dzenali.gamification.item.Weapon;
 import be.dzenali.gamification.item.armor.Pajama;
 import be.dzenali.gamification.item.weapon.Toothpick;
 

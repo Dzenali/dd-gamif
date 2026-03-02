@@ -3,9 +3,7 @@ package be.dzenali.gamification.entity.archetype;
 import be.dzenali.gamification.data.StatBlock;
 import be.dzenali.gamification.entity.Monster;
 import be.dzenali.gamification.entity.Player;
-import be.dzenali.gamification.item.Armor;
 import be.dzenali.gamification.item.Item;
-import be.dzenali.gamification.item.Weapon;
 import be.dzenali.gamification.item.armor.Gabison;
 import be.dzenali.gamification.item.weapon.DualDagger;
 

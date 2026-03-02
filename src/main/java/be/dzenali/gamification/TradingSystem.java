@@ -1,17 +1,15 @@
 package be.dzenali.gamification;
 
 import be.dzenali.gamification.data.ArmorType;
+import be.dzenali.gamification.data.StatType;
 import be.dzenali.gamification.data.WeaponType;
 import be.dzenali.gamification.entity.Player;
 import be.dzenali.gamification.item.Armor;
-import be.dzenali.gamification.item.Equipment;
 import be.dzenali.gamification.item.Item;
 import be.dzenali.gamification.item.Weapon;
 import be.dzenali.gamification.item.consumables.HealthPotion;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Class that handles trading system
@@ -36,14 +34,12 @@ public class TradingSystem {
     public int sellItem(ArrayList<Item> playerItems, Item item){
         if(playerItems.contains(item)){
             playerItems.remove(item);
-            return (int)(item.getValue()*reputation);
+            int sellValue = (int)(item.getValue()*reputation);
+            updateReputation(sellValue);
+            return sellValue ;
         } else {
             return 0;
         }
-    }
-
-    public void updateReputation(int modif){
-        reputation += modif;
     }
 
     /**
@@ -54,6 +50,7 @@ public class TradingSystem {
     public int sellArmor(Player player){
         int value = (int)(player.getArmor().getValue()*reputation);
         player.setArmor(new Armor(0,ArmorType.LIGHT,0,0));
+        updateReputation(value);
         return value;
     }
     /**
@@ -65,8 +62,10 @@ public class TradingSystem {
         int value = player.getWeapon().getValue();
         int durability = player.getWeapon().getDurability();
         int maxDurability = player.getWeapon().getMaxDurability();
+        int sellValue = (int)((value*reputation*durability)/maxDurability);
         player.setWeapon(new Weapon(1,WeaponType.SHORT,5,0));
-        return (int)((value*reputation*durability)/maxDurability);
+        updateReputation(sellValue);
+        return sellValue;
     }
 
     /**
@@ -83,6 +82,39 @@ public class TradingSystem {
             player.addEquipment(item);
             System.out.println("You buy " + item);
         }
+    }
+
+    /**
+     * Try to steal an item from the shop (cannot steal weapons and armors). Requires a dexterity higher than the threshold.
+     * @param player Player trying to steal
+     * @param item Item to steal
+     */
+    public void tryToSteal(Player player, Item item){
+        int dex = player.getStat(StatType.DEXTERITY);
+        int itemValue = item.getValue();
+        int itemWeight = item.getWeight();
+        if( dex*5 > itemValue*itemWeight ){
+            System.out.println("Great success, you stole this item.");
+            player.addEquipment(item);
+        }
+        else {
+            updateReputation(itemValue);
+            System.out.println("Ho no, you got caught, the merchant dislikes that, you lost some rep...");
+        }
+    }
+
+
+    /**
+     * Update player's reputation, must stay 0.01 <= reputation <= 2.
+     * @param sellValue item value
+     */
+    private void updateReputation(int sellValue){
+        double modificator = (double)sellValue / 10000;
+        if(reputation + modificator >= 2){
+            reputation = 2;
+        } else if (reputation + modificator <= 0) {
+            reputation = 0.01;
+        } else { reputation += modificator; }
     }
 
     @Override

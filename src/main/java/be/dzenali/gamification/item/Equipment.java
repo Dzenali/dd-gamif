@@ -1,7 +1,5 @@
 package be.dzenali.gamification.item;
 
-import be.dzenali.gamification.data.ArmorType;
-
 public class Equipment {
     private int durability;
     private int maxDurability;

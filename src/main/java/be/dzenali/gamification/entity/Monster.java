@@ -4,7 +4,6 @@ import be.dzenali.gamification.data.Aggressivity;
 import be.dzenali.gamification.data.HealthPoints;
 import be.dzenali.gamification.data.StatBlock;
 import be.dzenali.gamification.data.StatType;
-import be.dzenali.gamification.item.Item;
 
 public class Monster{
     private String name;
