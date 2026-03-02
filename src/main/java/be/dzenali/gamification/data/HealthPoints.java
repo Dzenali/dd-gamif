@@ -4,7 +4,7 @@ public class HealthPoints {
     private int currentHP;
     private final int maxHP;
 
-    public HealthPoints(int maxHP, int currentHP) {
+    public HealthPoints(int currentHP,int maxHP) {
         if(maxHP <= 0){ throw new IllegalArgumentException(
                 "Health must be > 0. Received: " + maxHP);
         }
