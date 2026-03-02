@@ -1,4 +1,4 @@
-package be.dzenali.gamfication;
+package be.dzenali.gamification;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
