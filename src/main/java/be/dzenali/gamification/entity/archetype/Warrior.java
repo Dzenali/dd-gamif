@@ -26,6 +26,10 @@ public class Warrior extends Player {
         this.addEquipment(new HealthPotion());
     }
 
+    /**
+     * Warrior attack, increasing rage (max100) and return weapon dmg.
+     * @return
+     */
     @Override
     public int attack(){
         int dmg = super.attack();
@@ -34,7 +38,7 @@ public class Warrior extends Player {
         return dmg;
     }
 
-    public int useWhirleWin(){
+    public int useWhirleWind(){
         if(rage >= 30){
             rage -= 30;
             System.out.println("Using Whirle Wind!");
@@ -45,6 +49,5 @@ public class Warrior extends Player {
         }
     }
 
-    @Override
     public int getResource(){ return rage;}
 }

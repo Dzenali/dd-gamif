@@ -39,13 +39,13 @@ public class HealthPoints {
      * @param amount current hp modifier
      * @return current hp value
      */
-    public int updateCurrentHP(int amount) {
+    public int updateCurrentHP(double amount) {
         if(this.getCurrentHP() + amount > this.getMaxHP()) {
             this.currentHP = this.getMaxHP();
-        } else if (this.currentHP + amount <= 0) {
+        } else if (this.currentHP + amount < 1) {
             this.currentHP = 0;
         } else {
-            this.currentHP += amount;
+            this.currentHP += (int)amount;
         }
         return this.getCurrentHP();
     }

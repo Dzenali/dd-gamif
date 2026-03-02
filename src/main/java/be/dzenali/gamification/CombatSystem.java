@@ -96,7 +96,7 @@ public class CombatSystem {
         String spell = scanner.nextLine();
         int dmg = 0;
         if(player instanceof Warrior){
-            dmg = ((Warrior) player).useWhirleWin();
+            dmg = ((Warrior) player).useWhirleWind();
         } else if (player instanceof Mage){
             switch (spell){
                 case "1" -> dmg = ((Mage)player).cast("FireBall");

@@ -47,4 +47,8 @@ public class Rogue extends Player {
         return attack()*2;
     }
 
+    public int getRessource(){
+        return energy;
+    }
+
 }

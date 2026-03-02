@@ -56,6 +56,9 @@ public class Mage extends Player {
         return 0;
     }
 
-    @Override
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
     public int getResource(){ return mana;}
 }
