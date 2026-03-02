@@ -19,18 +19,6 @@ public class StatBlock {
         stats.put(StatType.CHARISMA, validateInit(cha));
     }
 
-
-    private int validateInit(int value) {
-        if (value < 0 || value > 20) {
-            throw new IllegalArgumentException("Stat must be between 0 and 20");
-        }
-        return value;
-    }
-
-    private boolean validateIncrease(StatType stat) {
-        return stats.get(stat) < 20;
-    }
-
     public int get(StatType type) {
         return stats.get(type);
     }
@@ -41,4 +29,18 @@ public class StatBlock {
             System.out.println("Stat" + type + "cannot increase above 20.");
         }
     }
+
+    private int validateInit(int value) {
+        if (value < 1) {
+            value = 1;
+        } else if (value > 18) {
+            value = 18;
+        }
+        return value;
+    }
+
+    private boolean validateIncrease(StatType stat) {
+        return stats.get(stat) < 20;
+    }
+
 }
