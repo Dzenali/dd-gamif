@@ -38,13 +38,19 @@ public class Monster{
 
     public StatBlock getStatBlock() { return statBlock; }
 
-
+    /**
+     *  Damages based on attack times aggressivity multiplier
+     * @return dmg * mult
+     */
     public int getAttackDmg() {
-        return attack * (int) aggressivity.getMultiplier();
+        return (int)(attack *  aggressivity.getMultiplier());
     }
-
+    /**
+     *  armor based on attack times aggressivity multiplier
+     * @return armor * mult
+     */
     public int getArmorClass() {
-        return armorClass / (int) aggressivity.getMultiplier();
+        return (int)(armorClass /  aggressivity.getMultiplier());
     }
 
     public Aggressivity getAggressivity() { return aggressivity; }

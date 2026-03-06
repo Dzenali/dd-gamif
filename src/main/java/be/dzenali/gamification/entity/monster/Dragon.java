@@ -5,7 +5,6 @@ import be.dzenali.gamification.data.StatBlock;
 import be.dzenali.gamification.entity.Monster;
 
 public class Dragon extends Monster {
-    private boolean canFly = true;
 
     /**
      * The strongest few to be met
@@ -14,7 +13,7 @@ public class Dragon extends Monster {
         super("Dragon",
                 15,
                 new StatBlock(20,20,20,20,20,20),
-                35,
+                36,
                 20,
                 Aggressivity.HIGH,
                 5000);
@@ -26,17 +25,23 @@ public class Dragon extends Monster {
      */
     @Override
     public int getAttackDmg(){
-        canFly = !(getHealthPoints().getCurrentHP() < getHealthPoints().getMaxHP()/2);
-        return canFly ? (int)(super.getAttackDmg()*0.5) : (int)(super.getAttackDmg()*1.5);
+        return canFly() ? super.getAttackDmg() : ((int)(super.getAttackDmg()*0.5));
     }
 
     /**
-     * As twice as much armor once grounded
+     * As 1.5x as much armor once grounded
      * @return armorClass
      */
     @Override
     public int getArmorClass(){
-        canFly = !(getHealthPoints().getCurrentHP() < getHealthPoints().getMaxHP()/2);
-        return canFly ? (int)(super.getArmorClass()*1.5) : super.getArmorClass();
+        return canFly() ? super.getArmorClass() : ((int)(super.getArmorClass()*1.5));
+    }
+
+    /**
+     * Returns whether the dragon is above mid hp and so can fly
+     * @return whether it can fly (hp >= max hp/2)
+     */
+    public boolean canFly(){
+        return getHealthPoints().getCurrentHP() >= (getHealthPoints().getMaxHP()/2);
     }
 }
