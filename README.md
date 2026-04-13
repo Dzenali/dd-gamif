@@ -18,6 +18,6 @@ mvn test-compile org.pitest:pitest-maven:mutationCoverage
 ### Coverage achievements
 To make Coverage Achievement works, it is required to go to:
 class to test -> run tests -> run with coverage
-![coverage-test.jpg](docs/coverage-test.jpg)
+![coverage-test.jpg](docs/coverage-test.png)
 
 
