@@ -2,12 +2,12 @@
 ### Requirements
 - [IntelliJ IDEA 2025.3 or later](https://www.jetbrains.com/idea/download/other/#releases-2025)
 ### How to
-- Download the [last version of the plugin](https://github.com/Dzenali/Plugin/tags)
+- Download the [last version of the plugin](https://github.com/Dzenali/dd-gamif/releases/tag/gamified-plugin-v0.5)
 - Open IntelliJ and open ``File -> Settings -> Plugins``
-- Click on the gear icon 
-![cog-wheel.jpg](docs/cog-wheel.jpg)
-- Click on "Install Plugin From Disk"
-![install-from-disks.jpg](docs/install-from-disks.jpg)
+- Click on the gear icon  
+![cog-wheel.jpg](docs/cog-wheel.jpg)  
+- Click on "Install Plugin From Disk"  
+![install-from-disks.jpg](docs/install-from-disks.jpg)  
 - Select plugin zip file
 - Restart IDE
 
@@ -21,3 +21,11 @@ class to test -> run tests -> run with coverage
 ![coverage-test.jpg](docs/coverage-test.png)
 
 
+## Testing
+/!\ DO NOT MODIFY CLASSES THAT ARE NOT TEST CLASSES /!\ 
+Achievements are based on mutants and modifying non test classes will modify pitest output. 
+### Starting
+Package data, entity and item are easier to start with when beginning the exploration of the codebase.
+Classes in main/java/be/dzenali/gamification/Builders are not to be tested but tools to ease instantiation during testing.
+
+ 
