@@ -85,6 +85,7 @@
                     </avoidCallsTo>
                     <excludedClasses>
                         <param>be.dzenali.gamification.example.*</param>
+                        <param>be.dzenali.gamification.builders.*</param>
                     </excludedClasses>
                     <excludedTestClasses>
                         <param>be.dzenali.gamification.example.*</param>
