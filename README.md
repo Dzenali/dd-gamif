@@ -13,7 +13,7 @@
 
 ## Playing
 ### Running Pitest
-To check whether your tests kill mutants, you can run the command in your terminal on IJ:
+To check whether your tests kill mutants, you can run the command in your terminal on IJ:  
 `mvn test-compile org.pitest:pitest-maven:mutationCoverage`
 ### Coverage achievements
 To make Coverage Achievement works, it is required to go to:
