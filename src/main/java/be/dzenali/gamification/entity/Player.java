@@ -21,13 +21,13 @@ public class Player {
     private int exp;
 
     public Player(String name,
-                  int healtModifier,
+                  int healthModifier,
                   StatBlock statblock,
                   Armor armor,
                   Weapon weapon,
                   ArrayList<Item> equipment) {
         this.name = name;
-        this.healthPoints = new HealthPoints((statblock.get(StatType.CONSTITUTION)*healtModifier), (statblock.get(StatType.CONSTITUTION)*healtModifier));
+        this.healthPoints = new HealthPoints((statblock.get(StatType.CONSTITUTION)*healthModifier), (statblock.get(StatType.CONSTITUTION)*healthModifier));
         this.statBlock = statblock;
         this.armor = armor;
         this.weapon = weapon;
