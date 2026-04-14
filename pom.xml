@@ -78,6 +78,7 @@
                     <fullMutationMatrix>true</fullMutationMatrix>
                     <outputFormats>
                         <outputFormat>XML</outputFormat>
+                        <outputFormat>HTML</outputFormat>
                     </outputFormats>
                     <avoidCallsTo>
                         <avoidCallsTo>java.io.PrintStream</avoidCallsTo>
