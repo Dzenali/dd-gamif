@@ -22,7 +22,7 @@ class to test -> run tests -> run with coverage
 
 
 ## Testing
-/!\ DO NOT MODIFY CLASSES THAT ARE NOT TEST CLASSES /!\ 
+/!\ DO NOT MODIFY CLASSES THAT ARE NOT TEST CLASSES /!\   
 Achievements are based on mutants and modifying non test classes will modify pitest output. 
 ### Starting
 Package data, entity and item are easier to start with when beginning the exploration of the codebase.
