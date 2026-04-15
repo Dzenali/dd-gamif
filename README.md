@@ -2,7 +2,7 @@
 ### Requirements
 - [IntelliJ IDEA 2025.3 or later](https://www.jetbrains.com/idea/download/other/#releases-2025)
 ### How to
-- Download the [last version of the plugin](https://github.com/Dzenali/dd-gamif/releases/tag/gamified-plugin-v0.5)
+- Download the [last version of the plugin](https://github.com/Dzenali/plugin/releases/tag/v0.2)
 - Open IntelliJ and open ``File -> Settings -> Plugins``
 - Click on the gear icon  
 ![cog-wheel.jpg](docs/cog-wheel.jpg)  
