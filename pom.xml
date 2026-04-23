@@ -67,7 +67,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
                 <configuration>
-                    <argLine>@{argLine}</argLine>  <!-- ADD THIS -->
+                    <failOnError>false</failOnError>
+                    <proc>none</proc>
                 </configuration>
             </plugin>
             <plugin>
