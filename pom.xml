@@ -24,12 +24,12 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
             <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
@@ -67,8 +67,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
                 <configuration>
-                    <failOnError>false</failOnError>
-                    <proc>none</proc>
+                    <argLine>@{argLine}</argLine>  <!-- ADD THIS -->
                 </configuration>
             </plugin>
             <plugin>
